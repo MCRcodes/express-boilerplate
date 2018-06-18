@@ -9,6 +9,8 @@ Simple Express Backend w/ Webpack, ES6, ESLint (AirBnb) and hot reloading.
 - Hot-Reload
 - ESLint w/ Standard
 - Express
+- Dotenv
+- Mongoose
 
 ## Usage
 
