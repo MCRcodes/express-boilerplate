@@ -1,6 +1,6 @@
 # express-boilerplate
 
-> Simple Express Backend w/ Webpack, ES6, ESLint, Hot-Reload Template
+Simple Express Backend w/ Webpack, ES6, ESLint (AirBnb) and hot reloading.
 
 ## Includes
 
@@ -22,15 +22,15 @@ rm -rf .git
 
 npm install
 
-# hot reload - you'll probably want to use this whilst developing
+# hot reload (watch for file changes) - you'll probably want to use this whilst developing
 npm run dev
 
-# build
+# build (use this for deploying)
 npm run build
 
 # build & start
 npm start
 
 # test
-npm run unit
+npm run test
 ```
