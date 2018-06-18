@@ -18,7 +18,9 @@
     "body-parser": "^1.18.3",
     "chalk": "^2.1.0",
     "cors": "^2.8.4",
-    "express": "^4.15.4"
+    "dotenv": "^6.0.0",
+    "express": "^4.15.4",
+    "mongoose": "^5.1.5"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
