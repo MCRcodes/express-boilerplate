@@ -1,12 +1,12 @@
-const webpack       = require('webpack');
-const path          = require('path');
+const webpack = require('webpack');
+const path = require('path');
 const nodeExternals = require('webpack-node-externals');
 
 module.exports = [
   {
     entry: [
       'babel-polyfill',
-      path.resolve(__dirname, 'src/index.js')
+      path.resolve(__dirname, 'src/index.js'),
     ],
 
     target: 'node',
@@ -14,7 +14,7 @@ module.exports = [
     output: {
       path: path.resolve(__dirname, 'dist'),
       filename: 'bundle.js',
-      publicPath: '/'
+      publicPath: '/',
     },
 
     devtool: '#source-map',
@@ -27,17 +27,17 @@ module.exports = [
           enforce: 'pre',
           include: [path.resolve(__dirname, 'src'), path.resolve(__dirname, 'test')],
           options: {
-            formatter: require('eslint-friendly-formatter')
-          }
+            formatter: require('eslint-friendly-formatter'),
+          },
         },
         {
           exclude: /node_modules/,
           loader: 'babel-loader',
           query: {
-            presets: ['env']
-          }
-        }
-      ]
+            presets: ['env'],
+          },
+        },
+      ],
     },
 
     externals: [nodeExternals()],
@@ -45,7 +45,7 @@ module.exports = [
     plugins: [
       new webpack.HotModuleReplacementPlugin(),
       new webpack.NamedModulesPlugin(),
-      new webpack.NoEmitOnErrorsPlugin()
-    ]
-  }
+      new webpack.NoEmitOnErrorsPlugin(),
+    ],
+  },
 ];

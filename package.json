@@ -9,10 +9,10 @@
   "scripts": {
     "clean": "rm -rf dist && mkdir dist && webpack",
     "dev": "npm run clean && concurrently --kill-others \"webpack --watch\" \"forever -w ./dist/bundle.js\"",
-    "unit": "cross-env BABEL_ENV=test karma start test/unit/karma.conf.js --single-run",
     "build": "NODE_ENV=prod webpack",
     "lint": "eslint --ext .js",
-    "start": "npm run build && node dist/bundle.js"
+    "start": "npm run build && node dist/bundle.js",
+    "test": "jest"
   },
   "dependencies": {
     "chalk": "^2.1.0",
@@ -25,15 +25,13 @@
     "babel-polyfill": "^6.26.0",
     "babel-preset-env": "^1.6.0",
     "concurrently": "^3.5.0",
-    "eslint": "^4.7.1",
-    "eslint-config-standard": "^10.2.1",
-    "eslint-friendly-formatter": "^3.0.0",
-    "eslint-loader": "^1.9.0",
-    "eslint-plugin-import": "^2.7.0",
-    "eslint-plugin-node": "^5.1.1",
-    "eslint-plugin-promise": "^3.5.0",
-    "eslint-plugin-standard": "^3.0.1",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-friendly-formatter": "^4.0.1",
+    "eslint-loader": "^2.0.0",
+    "eslint-plugin-import": "^2.12.0",
     "forever": "^0.15.3",
+    "jest": "^23.1.0",
     "path": "^0.12.7",
     "webpack": "^3.6.0",
     "webpack-node-externals": "^1.6.0"

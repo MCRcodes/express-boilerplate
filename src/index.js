@@ -1,31 +1,15 @@
-import express from 'express'
-import chalk   from 'chalk'
-import path    from 'path'
+import express from 'express';
+import chalk from 'chalk';
 
-import config  from './config'
+const app = express();
 
-const app = express()
+app.get('/', (req, res) => res.json({ hello: 'world!' }));
 
-app.use('/', express.static(path.resolve(__dirname, '/../public')))
+app.listen(3000, () => {
+  const { log } = console;
 
-app.get('/', (req, res) => {
-  res.send({
-    message: 'I am a server route and can also be hot reloaded!'
-  })
-})
+  log('\n');
+  log(chalk.bgGreen.black('Server listening on http://localhost:3000'));
+});
 
-app.get('/hello', (req, res) => {
-  return res.send('Can you hear me?')
-})
-
-app.listen(config.PORT, () => {
-  const log = console.log
-  log('\n')
-  log(chalk.bgGreen.black(`Server listening on http://localhost:${config.PORT}/ ..`))
-  log('\n')
-
-  log(`${chalk.blue('Much fun! :)')}`)
-  log('\n')
-})
-
-export default app
+export default app;

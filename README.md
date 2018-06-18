@@ -22,7 +22,7 @@ rm -rf .git
 
 npm install
 
-# hot reload
+# hot reload - you'll probably want to use this whilst developing
 npm run dev
 
 # build
